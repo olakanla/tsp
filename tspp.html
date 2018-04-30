@@ -2,14 +2,45 @@
   <head>
     <style>
       #map {
-        height: 400px;
+        height: 800px;
         width: 100%;
        }
     </style>
+
+    <script type="text/javascript" src="./lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="./src/main.js"></script>
+    <script type="text/javascript" src="./src/algorithm.js"></script>
+    <script type="text/javascript" src="./src/utils.js"></script>
+    <script type="text/javascript" src="./src/data.js"></script>
+
   </head>
   <body>
     <h3>Higher Institutions in Lagos TSP</h3>
+    <div class="container">
+        <header>
+            <h1 id="title">Traveling Salesman Problem Using Genetic Algorithms</h1>
+        </header>
+        <div class="row-fluid">
+            <div id="control_bottons" class="btn-group row">
+                <button id="addRandom_btn" class="btn">Add 50 Random Points</button>
+                <button id="start_btn" class="btn">Start/Restart</button>
+                <button id="stop_btn" class="btn">Stop/Continue</button>
+                <button id="clear_btn" class="btn">Clear All</button>
+            </div>
+            <div class="row">
+                <span id="status" class="show-grid"></span>
+            </div>
+            <div class="modal-guy"></div>
+            <canvas id="canvas"
+                    width="880" height="660"
+                    style="border:1px solid;" hidden>
+                your browser sucks
+            </canvas>
+        </div>
+    </div>
+
     <div id="map"></div>
+
     <script>
      function initMap() {
 	
@@ -84,7 +115,7 @@
 					<br>St. Finbarrs College Road, Akoka, Lagos<br>\
 					<a href="http://bit.do/eeQUk">Get Directions</a>',
                    lat: 6.5225924,
-                   long: 3.3819078 
+                   long: 3.3819078
 	};
 
     var LASPOTECH = {
@@ -182,9 +213,7 @@
       
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=
-    AIzaSyCqUYgMxemYojitDw7K13zuuAyQyboj1gk
-    &callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqUYgMxemYojitDw7K13zuuAyQyboj1gk&callback=initMap">
     </script>
   </body>
 </html>
